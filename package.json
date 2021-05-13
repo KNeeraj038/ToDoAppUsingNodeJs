@@ -1,0 +1,24 @@
+{
+  "name": "todo_app",
+  "version": "1.0.0",
+  "description": "To DO app using Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNeeraj038/ToDoAppUsingNodeJs.git"
+  },
+  "author": "Kumar Neeraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KNeeraj038/ToDoAppUsingNodeJs/issues"
+  },
+  "homepage": "https://github.com/KNeeraj038/ToDoAppUsingNodeJs#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.8"
+  }
+}
