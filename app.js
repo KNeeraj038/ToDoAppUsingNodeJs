@@ -18,7 +18,15 @@ app.use(express.urlencoded({
 
 app.use(express.static("public"));
 
-app.use(require("./routes/index"))
+
+app.use(require("./routes/index"));
+
+// Todo router
+const todoRouter  = require('./routes/todo');
+app.use('/todo', todoRouter);
+
+// app.use(require("./routes/todo"));
+
 
 // setting templating engine.
 app.set("view engine", "ejs");

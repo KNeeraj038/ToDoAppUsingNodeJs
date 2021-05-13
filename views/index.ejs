@@ -6,20 +6,23 @@
   </nav>
 
   <div class="container mt-5">
-    <form action="/add/todo" class="d-flex">
+    <form action="todo/additem" method="POST" class="d-flex">
         <input type="text" name="todo" placeholder="Enter to do Item" class="form-control">
         
         <input type="submit" value="Add ToDo" class="btn btn-md btn-primary mx-2">
     </form>
 
     <ul class="list-group mt-5">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
-          </ul>
-
+        <% todo.forEach(todos =>{ %>
+            <li class="list-group-item">
+                    <a href="todo/deleteItem/<%=todos._id%>">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                <%=todos.todo%> 
+                <a href="todo/deleteItem/<%=todos._id%>" class="btn btn-danger btn-sm">Delete</a>
+            </li>
+        <%})%>    
+    </ul>
   </div>
 
   
