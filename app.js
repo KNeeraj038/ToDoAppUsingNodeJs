@@ -31,10 +31,19 @@ app.use('/todo', todoRouter);
 // setting templating engine.
 app.set("view engine", "ejs");
 
-const port = process.env.PORT || 3000;
+//const port = process.env.PORT || 3000;
 
 //Server config.
 
-app.listen(port, () =>{
-    console.log("Server running @ port:"+ port);
+//app.listen(port, () =>{
+  //  console.log("Server running @ port:"+ port);
+//});
+
+
+
+const PORT = process.env.PORT || 80;
+var server = app.listen(PORT, function() {
+    // var host = server.address().address;
+    // var port = server.address().port;
+    console.log("server is listening at %s", PORT);
 });
